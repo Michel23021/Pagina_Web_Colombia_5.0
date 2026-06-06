@@ -1,241 +1,78 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Glossary – Colombia 5.0</title>
-  <link rel="stylesheet" href="../css/style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
-</head>
-<body>
+// =============================================
+// COLOMBIA 5.0 — Main JavaScript
+// =============================================
 
-  <!-- NAV -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-logo"><span class="logo-dot"></span>Colombia <strong>5.0</strong></div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="../index.html">Inicio / Home</a></li>
-      <li><a href="conferencias.html">Conferencias</a></li>
-      <li><a href="glosario.html" class="active">Glossary</a></li>
-      <li><a href="etica.html">Ética / Ethics</a></li>
-    </ul>
-  </nav>
+// ── Navbar scroll effect ──
+const navbar = document.getElementById('navbar');
+if (navbar) {
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+}
 
-  <!-- PAGE HEADER -->
-  <div class="page-header">
-    <div class="container">
-      <h1>Technical <span style="color:var(--col-yellow)">Glossary</span></h1>
-      <p>Más de 30 términos técnicos en inglés aprendidos durante el evento Colombia 5.0, con traducción al español y definición.</p>
-    </div>
-  </div>
+// ── Hamburger menu ──
+const hamburger = document.getElementById('hamburger');
+const navLinks  = document.getElementById('nav-links');
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+  // Close on link click
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('open');
+    });
+  });
+}
 
-  <!-- GLOSSARY -->
-  <section class="glossary-section">
-    <div class="container">
+// ── Language toggle for conference summaries ──
+document.querySelectorAll('.lang-toggle').forEach(toggle => {
+  const parent = toggle.closest('.conf-summary') || toggle.closest('.conf-body');
+  toggle.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      toggle.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const lang = btn.dataset.lang;
+      if (parent) {
+        parent.querySelectorAll('.summary-es, .summary-en').forEach(el => el.classList.add('hidden'));
+        parent.querySelectorAll(`.summary-${lang}`).forEach(el => el.classList.remove('hidden'));
+      }
+    });
+  });
+});
 
-      <!-- Search -->
-      <div class="gloss-search">
-        <input type="text" id="gloss-search" placeholder="🔍 Search a term / Buscar término..." autocomplete="off"/>
-      </div>
+// ── Glossary live search ──
+const searchInput = document.getElementById('gloss-search');
+if (searchInput) {
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.toLowerCase();
+    document.querySelectorAll('.gloss-table tbody tr').forEach(row => {
+      row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+}
 
-      <table class="gloss-table">
-        <thead>
-          <tr>
-            <th>English</th>
-            <th>Español</th>
-            <th>Definition / Definición</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="en-word">Artificial Intelligence (AI)</td>
-            <td class="es-word">Inteligencia Artificial (IA)</td>
-            <td class="def">Simulation of human intelligence by machines, especially computer systems, to perform tasks that normally require human cognition.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Machine Learning</td>
-            <td class="es-word">Aprendizaje Automático</td>
-            <td class="def">Branch of AI that enables systems to learn and improve from experience without being explicitly programmed.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Deep Learning</td>
-            <td class="es-word">Aprendizaje Profundo</td>
-            <td class="def">Subset of machine learning using neural networks with many layers to analyze complex patterns in data.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Cloud Computing</td>
-            <td class="es-word">Computación en la Nube</td>
-            <td class="def">Delivery of computing services (servers, storage, databases, networking) over the internet on demand.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Big Data</td>
-            <td class="es-word">Grandes Datos</td>
-            <td class="def">Extremely large datasets that require advanced tools to capture, store, analyze and visualize effectively.</td>
-          </tr>
-          <tr>
-            <td class="en-word">API (Application Programming Interface)</td>
-            <td class="es-word">Interfaz de Programación de Aplicaciones</td>
-            <td class="def">Set of definitions and protocols that allows different software applications to communicate with each other.</td>
-          </tr>
-          <tr>
-            <td class="en-word">DevOps</td>
-            <td class="es-word">Desarrollo y Operaciones</td>
-            <td class="def">Methodology combining software development and IT operations to shorten development cycles and improve delivery quality.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Cybersecurity</td>
-            <td class="es-word">Ciberseguridad</td>
-            <td class="def">Practice of protecting systems, networks and programs from digital attacks, damage, or unauthorized access.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Blockchain</td>
-            <td class="es-word">Cadena de Bloques</td>
-            <td class="def">Distributed ledger technology that records transactions in a secure, transparent, and immutable chain of blocks.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Internet of Things (IoT)</td>
-            <td class="es-word">Internet de las Cosas</td>
-            <td class="def">Network of physical devices embedded with sensors and software that collect and exchange data over the internet.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Automation</td>
-            <td class="es-word">Automatización</td>
-            <td class="def">Technology that performs tasks with minimal human intervention, increasing efficiency and reducing errors.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Data Science</td>
-            <td class="es-word">Ciencia de Datos</td>
-            <td class="def">Interdisciplinary field that uses statistics, algorithms, and machine learning to extract insights from data.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Agile</td>
-            <td class="es-word">Ágil</td>
-            <td class="def">Iterative approach to software development that promotes flexibility, collaboration, and rapid delivery of functional software.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Microservices</td>
-            <td class="es-word">Microservicios</td>
-            <td class="def">Architectural style that structures an application as a collection of small, independently deployable services.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Neural Network</td>
-            <td class="es-word">Red Neuronal</td>
-            <td class="def">Computing system modeled after the human brain, consisting of interconnected nodes that process information in layers.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Prompt Engineering</td>
-            <td class="es-word">Ingeniería de Prompts</td>
-            <td class="def">Practice of designing and optimizing input instructions to get desired outputs from AI language models.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Digital Transformation</td>
-            <td class="es-word">Transformación Digital</td>
-            <td class="def">Integration of digital technology into all areas of a business, fundamentally changing how it operates and delivers value.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Scalability</td>
-            <td class="es-word">Escalabilidad</td>
-            <td class="def">Capability of a system or process to handle a growing workload by adding resources without losing performance.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Encryption</td>
-            <td class="es-word">Cifrado</td>
-            <td class="def">Process of encoding information so only authorized parties can access it, protecting data from unauthorized access.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Phishing</td>
-            <td class="es-word">Suplantación de Identidad</td>
-            <td class="def">Fraudulent attempt to steal sensitive information by disguising as a trustworthy entity in electronic communications.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Ransomware</td>
-            <td class="es-word">Secuestro de Datos</td>
-            <td class="def">Type of malicious software that encrypts a victim's files and demands payment for the decryption key.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Multi-Factor Authentication (MFA)</td>
-            <td class="es-word">Autenticación Multifactor</td>
-            <td class="def">Security method requiring users to verify identity through two or more independent credentials before access is granted.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Zero Trust</td>
-            <td class="es-word">Confianza Cero</td>
-            <td class="def">Security model that requires strict verification of every user and device, regardless of location, before granting access.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Generative AI</td>
-            <td class="es-word">IA Generativa</td>
-            <td class="def">AI systems capable of creating new content (text, images, audio, code) by learning patterns from existing data.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Large Language Model (LLM)</td>
-            <td class="es-word">Modelo de Lenguaje Grande</td>
-            <td class="def">AI model trained on massive amounts of text data to understand and generate human-like language.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Fintech</td>
-            <td class="es-word">Tecnología Financiera</td>
-            <td class="def">Technology that improves and automates financial services, making them more accessible and efficient for businesses and consumers.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Startup Ecosystem</td>
-            <td class="es-word">Ecosistema Emprendedor</td>
-            <td class="def">Community of startups, investors, mentors, and institutions that interact to support entrepreneurship and innovation.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Open Source</td>
-            <td class="es-word">Código Abierto</td>
-            <td class="def">Software whose source code is freely available for anyone to use, modify, and distribute.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Data Privacy</td>
-            <td class="es-word">Privacidad de Datos</td>
-            <td class="def">Right of individuals to control how their personal information is collected, stored, and used by organizations.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Algorithmic Bias</td>
-            <td class="es-word">Sesgo Algorítmico</td>
-            <td class="def">Systematic errors in AI outputs that create unfair outcomes due to flawed assumptions in the training data or algorithm design.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Software as a Service (SaaS)</td>
-            <td class="es-word">Software como Servicio</td>
-            <td class="def">Cloud-based software delivery model where applications are hosted remotely and accessed via the internet on subscription.</td>
-          </tr>
-          <tr>
-            <td class="en-word">User Experience (UX)</td>
-            <td class="es-word">Experiencia de Usuario</td>
-            <td class="def">Overall experience a person has when interacting with a product, particularly in terms of usability and satisfaction.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Responsive Design</td>
-            <td class="es-word">Diseño Responsivo</td>
-            <td class="def">Web design approach that makes pages render well on all devices and screen sizes, from desktop to mobile.</td>
-          </tr>
-          <tr>
-            <td class="en-word">Version Control</td>
-            <td class="es-word">Control de Versiones</td>
-            <td class="def">System that tracks and manages changes to source code over time, allowing teams to collaborate effectively (e.g., Git).</td>
-          </tr>
-        </tbody>
-      </table>
+// ── Scroll reveal animation ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
 
-      <p style="text-align:center;color:var(--text-muted);font-size:0.85rem;margin-top:2rem">
-        Mostrando <strong style="color:var(--col-yellow)">35</strong> términos técnicos · Use el buscador para filtrar
-      </p>
+document.querySelectorAll('.obj-card, .stat, .conf-block, .ethics-card').forEach(el => {
+  el.classList.add('reveal');
+  observer.observe(el);
+});
 
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <p>Colombia <strong>5.0</strong> · SENA – Centro de Manufactura en Textil y Cuero</p>
-      <p class="footer-sub">Sitio desarrollado con HTML5, CSS3 y JavaScript</p>
-    </div>
-  </footer>
-
-  <script src="../js/main.js"></script>
-</body>
-</html>
+// ── Add reveal styles dynamically ──
+const style = document.createElement('style');
+style.textContent = `
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+`;
+document.head.appendChild(style);
