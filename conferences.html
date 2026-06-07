@@ -1,0 +1,455 @@
+/* ==========================================================================
+   VARIABLES GLOBALES (Cyberpunk & Glassmorphism)
+   ========================================================================== */
+:root {
+  --bg-main: #06060c;
+  --bg-card: rgba(16, 12, 30, 0.5);
+  --border-glass: rgba(157, 78, 221, 0.25);
+  --text-primary: #e2e8f0;
+  --text-muted: #94a3b8;
+  
+  /* Luces de Neón */
+  --neon-purple: #9d4edd;
+  --neon-blue: #00b4d8;
+  --neon-gold: #ffb703;
+}
+
+/* ==========================================================================
+   ESTILOS BASE
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  background-image: radial-gradient(circle at 50% 30%, #140b24 0%, #06060c 100%);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* Componente de Cristal (Glassmorphism) */
+.glass-effect {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+}
+
+/* ==========================================================================
+   BARRA DE NAVEGACIÓN
+   ========================================================================== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(6, 6, 12, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-brand {
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  text-shadow: 0 0 8px var(--neon-blue);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px var(--neon-purple);
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid var(--neon-gold);
+  color: var(--neon-gold);
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 8px rgba(255, 183, 3, 0.2);
+  transition: all 0.3s;
+}
+
+.lang-btn:hover {
+  background: var(--neon-gold);
+  color: #000;
+  box-shadow: 0 0 15px var(--neon-gold);
+}
+
+/* ==========================================================================
+   HERO SECTION (Inicio)
+   ========================================================================== */
+#home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 100px 20px;
+}
+
+.hero-badge {
+  background: rgba(157, 78, 221, 0.15);
+  border: 1px solid var(--neon-purple);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 0.9;
+  margin: 25px 0;
+  letter-spacing: -2px;
+}
+
+.hero-title .line1 {
+  color: #fff;
+}
+
+.hero-title .line2 {
+  color: var(--neon-blue);
+  text-shadow: 0 0 20px var(--neon-blue);
+  display: block;
+}
+
+.hero-subtitle {
+  max-width: 600px;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.hero-meta-item strong {
+  display: block;
+  font-size: 2rem;
+  color: var(--neon-gold);
+}
+
+.hero-meta-item span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   SECCIONES: CONFERENCIAS Y ÉTICA
+   ========================================================================== */
+.section-label {
+  color: var(--neon-purple);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.section-title em {
+  font-style: normal;
+  color: var(--neon-blue);
+}
+
+/* Grid de Tarjetas */
+.conf-grid, .ethics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.conf-card, .ethics-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  padding: 30px;
+  border-radius: 12px;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.conf-card:hover, .ethics-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(157, 78, 221, 0.15);
+  border-color: var(--neon-purple);
+}
+
+.conf-number {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+}
+
+.conf-tag {
+  color: var(--neon-gold);
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.conf-title {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.conf-speaker {
+  font-size: 0.9rem;
+  color: var(--neon-blue);
+  margin-bottom: 15px;
+}
+
+.conf-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.keyword {
+  background: rgba(0, 180, 216, 0.1);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  color: var(--neon-blue);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.conf-summary, .ethics-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.ethics-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.ethics-card h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.ethics-reflection {
+  background: rgba(157, 78, 221, 0.05);
+  border: 1px solid var(--border-glass);
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 40px;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   GALERÍA Y LIGHTBOX
+   ========================================================================== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(6, 6, 12, 0.9), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+  opacity: 1;
+}
+
+.gallery-item-label {
+  font-size: 0.85rem;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 4, 8, 0.95);
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
+  border: 1px solid var(--border-glass);
+  border-radius: 6px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   GLOSARIO Y TABLA
+   ========================================================================== */
+.glossary-search {
+  width: 100%;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  margin: 20px 0;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.glossary-search:focus {
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.2);
+}
+
+.table-container {
+  overflow-x: auto;
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+}
+
+.glossary-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  text-align: left;
+}
+
+.glossary-table th, .glossary-table td {
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glossary-table th {
+  background: rgba(157, 78, 221, 0.1);
+  color: var(--neon-gold);
+  font-weight: 600;
+}
+
+.glossary-table tr:last-child td {
+  border-bottom: none;
+}
+
+.glossary-table tr:hover td {
+  background: rgba(255, 255, 255, 0.01);
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: #040408;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.footer-brand {
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title { font-size: 3.2rem; }
+  nav { padding: 15px 20px; }
+  .nav-links { display: none; } /* Ideal para simplificar en móviles */
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colombia 5.0 – Glosario Técnico</title>
+  <!-- Enlace a los estilos globales compartidos -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════ NAV -->
+<nav>
+  <a href="index.html#home" class="nav-brand">COL 5.0</a>
+  <ul class="nav-links">
+    <li><a href="index.html#home"        data-lang-es="Inicio"       data-lang-en="Home">Inicio</a></li>
+    <li><a href="index.html#conferences" data-lang-es="Conferencias" data-lang-en="Conferences">Conferencias</a></li>
+    <li><a href="index.html#gallery"     data-lang-es="Galería"      data-lang-en="Gallery">Galería</a></li>
+    <li><a href="#glossary"              data-lang-es="Glosario"     data-lang-en="Glossary">Glosario</a></li>
+    <li><a href="ethics.html#ethics"     data-lang-es="Ética"        data-lang-en="Ethics">Ética</a></li>
+  </ul>
+  <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">EN</button>
+</nav>
+
+<!-- ════════════════════════════════════════ GLOSSARY MAIN SECTION -->
+<main style="margin-top: 80px;">
+  <section id="glossary">
+    <div class="container">
+      <span class="section-label" data-lang-es="Vocabulario Técnico" data-lang-en="Technical Vocabulary">Vocabulario Técnico</span>
+      <h2 class="section-title">Glos<em>ary</em></h2>
+      <p style="color:var(--muted); margin-top:0.5rem; font-size:0.9rem;" data-lang-es="Términos técnicos aprendidos durante Colombia 5.0 con su traducción y definición." data-lang-en="Technical terms learned during Colombia 5.0 with translation and definition.">
+        Términos técnicos aprendidos durante Colombia 5.0 con su traducción y definición.
+      </p>
+
+      <!-- Barra de búsqueda interactiva -->
+      <input type="text" class="glossary-search" id="glossarySearch" placeholder="Buscar término / Search term…" />
+
+      <!-- Contenedor responsivo para la tabla de cristal -->
+      <div style="overflow-x: auto; border-radius: 8px;">
+        <table class="glossary-table">
+          <thead>
+            <tr>
+              <th>English</th>
+              <th>Español</th>
+              <th data-lang-es="Definición" data-lang-en="Definition">Definición</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="gloss-row"><td>Artificial Intelligence</td><td>Inteligencia Artificial</td><td class="es-content">Sistemas informáticos que simulan procesos del pensamiento humano.</td><td class="en-content" style="display:none;">Computer systems that simulate human thinking processes.</td></tr>
+            <tr class="gloss-row"><td>Machine Learning</td><td>Aprendizaje Automático</td><td class="es-content">Rama de la IA que permite a los sistemas aprender de datos sin programación explícita.</td><td class="en-content" style="display:none;">AI branch that lets systems learn from data without explicit programming.</td></tr>
+            <tr class="gloss-row"><td>Cloud Computing</td><td>Computación en la Nube</td><td class="es-content">Servicios de almacenamiento y procesamiento ofrecidos por internet.</td><td class="en-content" style="display:none;">Storage and processing services delivered over the internet.</td></tr>
+            <tr class="gloss-row"><td>Big Data</td><td>Grandes Datos</td><td class="es-content">Conjuntos de datos de gran volumen que requieren herramientas especiales para su análisis.</td><td class="en-content" style="display:none;">Large data sets requiring special tools for analysis.</td></tr>
+            <tr class="gloss-row"><td>Cybersecurity</td><td>Ciberseguridad</td><td class="es-content">Conjunto de prácticas para proteger sistemas, redes y datos de ataques digitales.</td><td class="en-content" style="display:none;">Practices for protecting systems, networks, and data from digital attacks.</td></tr>
+            <tr class="gloss-row"><td>Encryption</td><td>Encriptación</td><td class="es-content">Proceso de codificar información para que solo usuarios autorizados puedan leerla.</td><td class="en-content" style="display:none;">Process of encoding information so only authorized users can read it.</td></tr>
+            <tr class="gloss-row"><td>API</td><td>Interfaz de Programación</td><td class="es-content">Conjunto de reglas que permiten a distintas aplicaciones comunicarse entre sí.</td><td class="en-content" style="display:none;">Set of rules that allow different applications to communicate.</td></tr>
+            <tr class="gloss-row"><td>DevOps</td><td>Operaciones de Desarrollo</td><td class="es-content">Práctica que integra desarrollo de software y operaciones de TI para entregas más rápidas.</td><td class="en-content" style="display:none;">Practice integrating software development and IT operations for faster delivery.</td></tr>
+            <tr class="gloss-row"><td>Blockchain</td><td>Cadena de Bloques</td><td class="es-content">Registro distribuido e inmutable de transacciones digitales.</td><td class="en-content" style="display:none;">Distributed, immutable ledger of digital transactions.</td></tr>
+            <tr class="gloss-row"><td>Internet of Things</td><td>Internet de las Cosas</td><td class="es-content">Red de dispositivos físicos conectados que recopilan e intercambian datos.</td><td class="en-content" style="display:none;">Network of connected physical devices that collect and exchange data.</td></tr>
+            <tr class="gloss-row"><td>Deep Learning</td><td>Aprendizaje Profundo</td><td class="es-content">Subcampo del machine learning basado en redes neuronales de múltiples capas.</td><td class="en-content" style="display:none;">Machine learning subfield based on multilayer neural networks.</td></tr>
+            <tr class="gloss-row"><td>Natural Language Processing</td><td>Procesamiento del Lenguaje Natural</td><td class="es-content">Capacidad de los sistemas para entender y generar lenguaje humano.</td><td class="en-content" style="display:none;">Ability of systems to understand and generate human language.</td></tr>
+            <tr class="gloss-row"><td>Automation</td><td>Automatización</td><td class="es-content">Uso de tecnología para realizar tareas con mínima intervención humana.</td><td class="en-content" style="display:none;">Use of technology to perform tasks with minimal human intervention.</td></tr>
+            <tr class="gloss-row"><td>Agile Methodology</td><td>Metodología Ágil</td><td class="es-content">Marco de trabajo iterativo para el desarrollo de software centrado en entregas rápidas.</td><td class="en-content" style="display:none;">Iterative framework for software development focused on rapid delivery.</td></tr>
+            <tr class="gloss-row"><td>Microservices</td><td>Microservicios</td><td class="es-content">Arquitectura de software donde la aplicación se divide en servicios independientes.</td><td class="en-content" style="display:none;">Software architecture where the application is split into independent services.</td></tr>
+            <tr class="gloss-row"><td>Containerization</td><td>Contenedorización</td><td class="es-content">Empaquetado de software y sus dependencias en unidades portables llamadas contenedores.</td><td class="en-content" style="display:none;">Packaging software and dependencies into portable units called containers.</td></tr>
+            <tr class="gloss-row"><td>Data Science</td><td>Ciencia de Datos</td><td class="es-content">Campo interdisciplinario que usa estadística y programación para extraer conocimiento de datos.</td><td class="en-content" style="display:none;">Interdisciplinary field using statistics and programming to extract insights from data.</td></tr>
+            <tr class="gloss-row"><td>Phishing</td><td>Suplantación de Identidad</td><td class="es-content">Técnica de engaño digital para robar información confidencial haciéndose pasar por entidades legítimas.</td><td class="en-content" style="display:none;">Digital deception technique to steal confidential information by impersonating legitimate entities.</td></tr>
+            <tr class="gloss-row"><td>Zero Trust</td><td>Confianza Cero</td><td class="es-content">Modelo de seguridad que nunca confía automáticamente en ningún usuario o dispositivo.</td><td class="en-content" style="display:none;">Security model that never automatically trusts any user or device.</td></tr>
+            <tr class="gloss-row"><td>Ransomware</td><td>Secuestro de Datos</td><td class="es-content">Malware que cifra los archivos de la víctima y exige pago para restaurarlos.</td><td class="en-content" style="display:none;">Malware that encrypts victims' files and demands payment for restoration.</td></tr>
+            <tr class="gloss-row"><td>Scalability</td><td>Escalabilidad</td><td class="es-content">Capacidad de un sistema para crecer y adaptarse a mayor carga de trabajo.</td><td class="en-content" style="display:none;">Ability of a system to grow and adapt to greater workload.</td></tr>
+            <tr class="gloss-row"><td>UX / UI Design</td><td>Diseño de Experiencia e Interfaz</td><td class="es-content">Disciplina que busca crear interfaces digitales intuitivas y satisfactorias para el usuario.</td><td class="en-content" style="display:none;">Discipline focused on creating intuitive and satisfying digital interfaces for users.</td></tr>
+            <tr class="gloss-row"><td>Open Source</td><td>Código Abierto</td><td class="es-content">Software cuyo código fuente es público y puede ser usado, modificado y distribuido libremente.</td><td class="en-content" style="display:none;">Software whose source code is public and can be freely used, modified, and distributed.</td></tr>
+            <tr class="gloss-row"><td>Digital Transformation</td><td>Transformación Digital</td><td class="es-content">Proceso de integrar tecnología digital en todas las áreas de una organización.</td><td class="en-content" style="display:none;">Process of integrating digital technology across all areas of an organization.</td></tr>
+            <tr class="gloss-row"><td>Startup</td><td>Empresa Emergente</td><td class="es-content">Empresa en etapa inicial con un modelo de negocio innovador y escalable.</td><td class="en-content" style="display:none;">Early-stage company with an innovative and scalable business model.</td></tr>
+            <tr class="gloss-row"><td>Fintech</td><td>Tecnología Financiera</td><td class="es-content">Empresas que usan tecnología para ofrecer servicios financieros innovadores.</td><td class="en-content" style="display:none;">Companies using technology to deliver innovative financial services.</td></tr>
+            <tr class="gloss-row"><td>Algorithm</td><td>Algoritmo</td><td class="es-content">Secuencia de instrucciones paso a paso para resolver un problema computacional.</td><td class="en-content" style="display:none;">Step-by-step sequence of instructions to solve a computational problem.</td></tr>
+            <tr class="gloss-row"><td>Virtual Reality</td><td>Realidad Virtual</td><td class="es-content">Entorno digital simulado que sumerge al usuario en una experiencia inmersiva.</td><td class="en-content" style="display:none;">Simulated digital environment that immerses the user in an immersive experience.</td></tr>
+            <tr class="gloss-row"><td>Augmented Reality</td><td>Realidad Aumentada</td><td class="es-content">Tecnología que superpone elementos digitales sobre el mundo físico en tiempo real.</td><td class="en-content" style="display:none;">Technology that overlays digital elements on the physical world in real time.</td></tr>
+            <tr class="gloss-row"><td>Neural Network</td><td>Red Neuronal</td><td class="es-content">Sistema computacional inspirado en el cerebro humano, utilizado en inteligencia artificial.</td><td class="en-content" style="display:none;">Computational system inspired by the human brain, used in artificial intelligence.</td></tr>
+            <tr class="gloss-row"><td>SaaS</td><td>Software como Servicio</td><td class="es-content">Modelo de distribución donde el software se ofrece por internet bajo suscripción.</td><td class="en-content" style="display:none;">Distribution model where software is offered over the internet by subscription.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ════════════════════════════════════════ FOOTER -->
+<footer>
+  <div class="footer-brand">COLOMBIA 5.0</div>
+  <p data-lang-es="Evento Tecnológico · Bogotá, Colombia · 2026" data-lang-en="Technology Event · Bogotá, Colombia · 2026">Evento Tecnológico · Bogotá, Colombia · 2026</p>
+  <p style="margin-top:0.5rem;" data-lang-es="Sitio web desarrollado como actividad académica — SENA Centro de Manufactura en Textil y Cuero" data-lang-en="Website developed as an academic activity — SENA Centro de Manufactura en Textil y Cuero">Sitio web desarrollado como actividad académica — SENA Centro de Manufactura en Textil y Cuero</p>
+</footer>
+
+<!-- Enlace a los scripts globales compartidos -->
+<script src="js/main.js"></script>
+</body>
+</html>

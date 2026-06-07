@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colombia 5.0 – Ética Tecnológica</title>
+  <!-- Enlace a los estilos globales compartidos -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════ NAV -->
+<nav>
+  <a href="index.html#home" class="nav-brand">COL 5.0</a>
+  <ul class="nav-links">
+    <li><a href="index.html#home"        data-lang-es="Inicio"       data-lang-en="Home">Inicio</a></li>
+    <li><a href="index.html#conferences" data-lang-es="Conferencias" data-lang-en="Conferences">Conferencias</a></li>
+    <li><a href="index.html#gallery"     data-lang-es="Galería"      data-lang-en="Gallery">Galería</a></li>
+    <li><a href="index.html#glossary"    data-lang-es="Glosario"     data-lang-en="Glossary">Glosario</a></li>
+    <li><a href="#ethics"                data-lang-es="Ética"        data-lang-en="Ethics">Ética</a></li>
+  </ul>
+  <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">EN</button>
+</nav>
+
+<!-- ════════════════════════════════════════ ETHICS MAIN SECTION -->
+<main style="margin-top: 80px;">
+  <section id="ethics">
+    <div class="container">
+      <span class="section-label" data-lang-es="Reflexión" data-lang-en="Reflection">Reflexión</span>
+      <h2 class="section-title" data-lang-es="Ética en la <em>Tecnología</em>" data-lang-en="Ethics in <em>Technology</em>">Ética en la <em>Tecnología</em></h2>
+      <p style="color:var(--muted); margin-top:0.5rem; font-size:0.9rem;" data-lang-es="¿Cómo se implementa la ética en la tecnología empresarial?" data-lang-en="How is ethics implemented in enterprise technology?">
+        ¿Cómo se implementa la ética en la tecnología empresarial?
+      </p>
+
+      <!-- Tarjetas de Ética -->
+      <div class="ethics-grid" style="margin-top:3rem;">
+        
+        <div class="ethics-card">
+          <div class="ethics-icon">🤖</div>
+          <h3 data-lang-es="Inteligencia Artificial Ética" data-lang-en="Ethical Artificial Intelligence">Inteligencia Artificial Ética</h3>
+          <p class="es-content">Los sistemas de IA deben diseñarse sin sesgos discriminatorios. Es responsabilidad de los desarrolladores garantizar que los algoritmos no perpetúen desigualdades sociales, raciales o de género. La transparencia en la toma de decisiones automática es un derecho ciudadano.</p>
+          <p class="en-content" style="display:none;">AI systems must be designed without discriminatory biases. It is the developers' responsibility to ensure that algorithms do not perpetuate social, racial, or gender inequalities. Transparency in automated decision-making is a citizens' right.</p>
+        </div>
+
+        <div class="ethics-card">
+          <div class="ethics-icon">🔒</div>
+          <h3 data-lang-es="Uso Responsable de Datos" data-lang-en="Responsible Use of Data">Uso Responsable de Datos</h3>
+          <p class="es-content">Los datos personales son un bien sensible. Las empresas tienen la obligación ética y legal de recolectarlos solo con consentimiento informado, almacenarlos de forma segura y nunca comercializarlos sin autorización. La privacidad es un derecho humano fundamental.</p>
+          <p class="en-content" style="display:none;">Personal data is a sensitive asset. Companies have an ethical and legal obligation to collect it only with informed consent, store it securely, and never commercialize it without authorization. Privacy is a fundamental human right.</p>
+        </div>
+
+        <div class="ethics-card">
+          <div class="ethics-icon">⚙️</div>
+          <h3 data-lang-es="Automatización y Empleo" data-lang-en="Automation and Employment">Automatización y Empleo</h3>
+          <p class="es-content">Si bien la automatización aumenta la productividad, su implementación debe ir acompañada de programas de reentrenamiento laboral. Las organizaciones tienen la responsabilidad social de minimizar el impacto negativo en los trabajadores desplazados por la tecnología.</p>
+          <p class="en-content" style="display:none;">While automation increases productivity, its implementation must be accompanied by workforce retraining programs. Organizations have a social responsibility to minimize the negative impact on workers displaced by technology.</p>
+        </div>
+
+        <div class="ethics-card">
+          <div class="ethics-icon">🌍</div>
+          <h3 data-lang-es="Impacto Social de la Tecnología" data-lang-en="Social Impact of Technology">Impacto Social de la Tecnología</h3>
+          <p class="es-content">El desarrollo tecnológico debe orientarse hacia la equidad. La brecha digital sigue siendo una barrera en países en desarrollo como Colombia. Los profesionales de tecnología tienen el deber de diseñar soluciones accesibles e inclusivas que beneficien a todos los sectores de la sociedad.</p>
+          <p class="en-content" style="display:none;">Technological development must be guided toward equity. The digital divide remains a barrier in developing countries like Colombia. Technology professionals have a duty to design accessible and inclusive solutions that benefit all sectors of society.</p>
+        </div>
+
+      </div>
+
+      <!-- Reflexión Final / Conclusión del Aprendiz -->
+      <div class="ethics-reflection">
+        <div class="es-content">
+          <p><strong>Conclusión personal:</strong> La experiencia en Colombia 5.0 me permitió comprender que la tecnología no es neutral — cada decisión de diseño tiene consecuencias humanas. En un país como Colombia, donde la desigualdad es una realidad cotidiana, los profesionales del software tenemos la responsabilidad de construir herramientas que reduzcan brechas en lugar de ampliarlas. La ética no es un módulo adicional del currículo: es el fundamento de toda buena práctica tecnológica. Automatizar con empatía, proteger datos con integridad y desarrollar IA con transparencia son los pilares de una tecnología verdaderamente responsable.</p>
+        </div>
+        <div class="en-content" style="display:none;">
+          <p><strong>Personal Conclusion:</strong> The experience at Colombia 5.0 helped me understand that technology is not neutral — every design decision has human consequences. In a country like Colombia, where inequality is an everyday reality, software professionals have a responsibility to build tools that reduce gaps rather than widen them. Ethics is not an optional module in the curriculum: it is the foundation of all good technological practice. Automating with empathy, protecting data with integrity, and developing AI with transparency are the pillars of truly responsible technology.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<!-- ════════════════════════════════════════ FOOTER -->
+<footer>
+  <div class="footer-brand">COLOMBIA 5.0</div>
+  <p data-lang-es="Evento Tecnológico · Bogotá, Colombia · 2026" data-lang-en="Technology Event · Bogotá, Colombia · 2026">Evento Tecnológico · Bogotá, Colombia · 2026</p>
+  <p style="margin-top:0.5rem;" data-lang-es="Sitio web desarrollado como actividad académica — SENA Centro de Manufactura en Textil y Cuero" data-lang-en="Website developed as an academic activity — SENA Centro de Manufactura en Textil y Cuero">Sitio web desarrollado como actividad académica — SENA Centro de Manufactura en Textil y Cuero</p>
+</footer>
+
+<!-- Enlace a los scripts globales compartidos -->
+<script src="js/main.js"></script>
+</body>
+</html>
