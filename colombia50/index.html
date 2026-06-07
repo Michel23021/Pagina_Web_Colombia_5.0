@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colombia 5.0 – Evento Tecnológico</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════ NAV -->
+<nav>
+  <a href="#home" class="nav-brand">COL 5.0</a>
+  <ul class="nav-links">
+    <li><a href="#home"      data-lang-es="Inicio"       data-lang-en="Home">Inicio</a></li>
+    <li><a href="#conferences" data-lang-es="Conferencias" data-lang-en="Conferences">Conferencias</a></li>
+    <li><a href="#gallery"   data-lang-es="Galería"      data-lang-en="Gallery">Galería</a></li>
+    <li><a href="#glossary"  data-lang-es="Glosario"     data-lang-en="Glossary">Glosario</a></li>
+    <li><a href="#ethics"    data-lang-es="Ética"        data-lang-en="Ethics">Ética</a></li>
+  </ul>
+  <button class="lang-btn" id="langBtn" onclick="toggleLanguage()">EN</button>
+</nav>
+
+<!-- ════════════════════════════════════════ HERO -->
+<section id="home">
+  <div class="hero-scan"></div>
+  <div class="hero-corner tl"></div>
+  <div class="hero-corner tr"></div>
+  <div class="hero-corner bl"></div>
+  <div class="hero-corner br"></div>
+  <div style="position:relative; z-index:1;">
+    <span class="hero-badge">🇨🇴 &nbsp;Bogotá, Colombia · 8 de Mayo 2026</span>
+    <h1 class="hero-title"><span class="line1">COLOMBIA</span><span class="line2">5.0</span></h1>
+    <p class="hero-subtitle es-content"
+       data-lang-es="El evento tecnológico más importante de Colombia — donde la inteligencia artificial, la automatización y el futuro empresarial convergen."
+       data-lang-en="Colombia's most important tech event — where artificial intelligence, automation, and the business future converge.">
+      El evento tecnológico más importante de Colombia — donde la inteligencia artificial, la automatización y el futuro empresarial convergen.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><strong>18</strong><span data-lang-es="Fotos del Evento" data-lang-en="Event Photos">Fotos del Evento</span></div>
+      <div class="hero-meta-item"><strong>2</strong><span data-lang-es="Conferencias" data-lang-en="Conferences">Conferencias</span></div>
+      <div class="hero-meta-item"><strong>30+</strong><span data-lang-es="Términos Técnicos" data-lang-en="Technical Terms">Términos Técnicos</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint" data-lang-es="Desplazar" data-lang-en="Scroll">Desplazar</div>
+</section>
+
+<!-- ════════════════════════════════════════ CONFERENCES -->
+<section id="conferences">
+  <div class="container">
+    <span class="section-label" data-lang-es="Conocimiento" data-lang-en="Knowledge">Conocimiento</span>
+    <h2 class="section-title" data-lang-es="Confer<em>encias</em>" data-lang-en="Confer<em>ences</em>">Confer<em>encias</em></h2>
+
+    <div class="conf-grid">
+
+      <!-- CONFERENCIA 1 -->
+      <div class="conf-card reveal">
+        <div class="conf-number">01</div>
+        <span class="conf-tag" data-lang-es="Asignada por Instructor" data-lang-en="Assigned by Instructor">Asignada por Instructor</span>
+        <h3 class="conf-title" data-lang-es="Inteligencia Artificial Aplicada a los Negocios" data-lang-en="Artificial Intelligence Applied to Business">Inteligencia Artificial Aplicada a los Negocios</h3>
+        <p class="conf-speaker">Carlos Andrés Medina · IBM Colombia</p>
+        <div class="conf-keywords">
+          <span class="keyword">Machine Learning</span>
+          <span class="keyword">NLP</span>
+          <span class="keyword">Big Data</span>
+          <span class="keyword">Automatización</span>
+          <span class="keyword">IA Generativa</span>
+        </div>
+
+        <!-- ESPAÑOL -->
+        <div class="es-content">
+          <p class="conf-summary">
+            La conferencia exploró cómo la inteligencia artificial está transformando el panorama empresarial en Colombia y Latinoamérica. El conferencista explicó que la IA ya no es exclusiva de grandes corporaciones: las pequeñas y medianas empresas pueden integrar herramientas de machine learning para optimizar procesos, predecir comportamientos del consumidor y automatizar tareas repetitivas. Se destacó el papel del procesamiento de lenguaje natural (NLP) en los chatbots empresariales, y la importancia de alimentar los modelos con datos de calidad. La reflexión central fue que la IA debe verse como un colaborador, no como un reemplazo del talento humano.
+          </p>
+        </div>
+        <!-- ENGLISH -->
+        <div class="en-content" style="display:none;">
+          <p class="conf-summary">
+            The conference explored how artificial intelligence is transforming the business landscape in Colombia and Latin America. The speaker explained that AI is no longer exclusive to large corporations: small and medium-sized businesses can integrate machine learning tools to optimize processes, predict consumer behavior, and automate repetitive tasks. The role of natural language processing (NLP) in enterprise chatbots was highlighted, along with the importance of feeding models with quality data. The central takeaway was that AI should be seen as a collaborator, not a replacement for human talent.
+          </p>
+        </div>
+      </div>
+
+      <!-- CONFERENCIA 2 -->
+      <div class="conf-card reveal">
+        <div class="conf-number">02</div>
+        <span class="conf-tag" data-lang-es="Selección Propia" data-lang-en="Student Choice">Selección Propia</span>
+        <h3 class="conf-title" data-lang-es="Ciberseguridad y Protección de Datos en la Era Digital" data-lang-en="Cybersecurity and Data Protection in the Digital Age">Ciberseguridad y Protección de Datos en la Era Digital</h3>
+        <p class="conf-speaker">Laura Quintero · CertiSec Latam</p>
+        <div class="conf-keywords">
+          <span class="keyword">Ciberseguridad</span>
+          <span class="keyword">GDPR</span>
+          <span class="keyword">Encriptación</span>
+          <span class="keyword">Zero Trust</span>
+          <span class="keyword">Phishing</span>
+        </div>
+
+        <!-- ESPAÑOL -->
+        <div class="es-content">
+          <p class="conf-summary">
+            En esta charla se abordó la creciente importancia de proteger la información digital en un mundo hiperconectado. La conferencista presentó estadísticas alarmantes sobre ataques de phishing, ransomware y robo de identidad en Colombia. Se explicaron conceptos como el modelo Zero Trust, que consiste en no confiar en ninguna entidad dentro o fuera de la red sin verificación previa. También se discutió la Ley 1581 de Protección de Datos Personales y cómo las empresas deben adaptarse a estándares internacionales como GDPR. La ponencia cerró con una llamada a la cultura de ciberseguridad desde las aulas.
+          </p>
+        </div>
+        <!-- ENGLISH -->
+        <div class="en-content" style="display:none;">
+          <p class="conf-summary">
+            This talk addressed the growing importance of protecting digital information in a hyperconnected world. The speaker presented alarming statistics about phishing attacks, ransomware, and identity theft in Colombia. Concepts such as the Zero Trust model were explained — the principle of never trusting any entity inside or outside the network without prior verification. Law 1581 on Personal Data Protection was also discussed, along with how companies must adapt to international standards like GDPR. The session concluded with a call to build a culture of cybersecurity starting in the classroom.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════ GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <span class="section-label" data-lang-es="Momentos" data-lang-en="Moments">Momentos</span>
+    <h2 class="section-title" data-lang-es="Galer<em>ía</em>" data-lang-en="Gall<em>ery</em>">Galer<em>ía</em></h2>
+    <p style="color:var(--muted); margin-top:0.5rem; font-size:0.9rem;" data-lang-es="Fotos del evento Colombia 5.0 — haz clic para ampliar." data-lang-en="Photos from the Colombia 5.0 event — click to enlarge.">
+      Fotos del evento Colombia 5.0 — haz clic para ampliar.
+    </p>
+
+    <div class="gallery-grid" style="margin-top:2.5rem;">
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_104342.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_104348.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_114028.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_114053.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_114313.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_114349.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_114356.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_114837.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_120442.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_120523.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_120629.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_120830.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_120915.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_120921.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_121153.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_121206.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_122048.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+      <div class="gallery-item reveal"><img src="images/photos/opt_20260508_123100.jpg" alt="Colombia 5.0" loading="lazy"><div class="gallery-item-overlay"><span class="gallery-item-label">Colombia 5.0</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <img id="lightboxImg" src="" alt="Foto Colombia 5.0" />
+</div>
+
+<!-- ════════════════════════════════════════ GLOSSARY -->
+<section id="glossary">
+  <div class="container">
+    <span class="section-label" data-lang-es="Vocabulario Técnico" data-lang-en="Technical Vocabulary">Vocabulario Técnico</span>
+    <h2 class="section-title">Glos<em>ary</em></h2>
+    <p style="color:var(--muted); margin-top:0.5rem; font-size:0.9rem;" data-lang-es="Términos técnicos aprendidos durante Colombia 5.0 con su traducción y definición." data-lang-en="Technical terms learned during Colombia 5.0 with translation and definition.">
+      Términos técnicos aprendidos durante Colombia 5.0 con su traducción y definición.
+    </p>
+
+    <input type="text" class="glossary-search" id="glossarySearch"
+           placeholder="Buscar término / Search term…" />
+
+    <table class="glossary-table">
+      <thead>
+        <tr>
+          <th>English</th>
+          <th>Español</th>
+          <th data-lang-es="Definición" data-lang-en="Definition">Definición</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="gloss-row"><td>Artificial Intelligence</td><td>Inteligencia Artificial</td><td class="es-content">Sistemas informáticos que simulan procesos del pensamiento humano.</td><td class="en-content" style="display:none;">Computer systems that simulate human thinking processes.</td></tr>
+        <tr class="gloss-row"><td>Machine Learning</td><td>Aprendizaje Automático</td><td class="es-content">Rama de la IA que permite a los sistemas aprender de datos sin programación explícita.</td><td class="en-content" style="display:none;">AI branch that lets systems learn from data without explicit programming.</td></tr>
+        <tr class="gloss-row"><td>Cloud Computing</td><td>Computación en la Nube</td><td class="es-content">Servicios de almacenamiento y procesamiento ofrecidos por internet.</td><td class="en-content" style="display:none;">Storage and processing services delivered over the internet.</td></tr>
+        <tr class="gloss-row"><td>Big Data</td><td>Grandes Datos</td><td class="es-content">Conjuntos de datos de gran volumen que requieren herramientas especiales para su análisis.</td><td class="en-content" style="display:none;">Large data sets requiring special tools for analysis.</td></tr>
+        <tr class="gloss-row"><td>Cybersecurity</td><td>Ciberseguridad</td><td class="es-content">Conjunto de prácticas para proteger sistemas, redes y datos de ataques digitales.</td><td class="en-content" style="display:none;">Practices for protecting systems, networks, and data from digital attacks.</td></tr>
+        <tr class="gloss-row"><td>Encryption</td><td>Encriptación</td><td class="es-content">Proceso de codificar información para que solo usuarios autorizados puedan leerla.</td><td class="en-content" style="display:none;">Process of encoding information so only authorized users can read it.</td></tr>
+        <tr class="gloss-row"><td>API</td><td>Interfaz de Programación</td><td class="es-content">Conjunto de reglas que permiten a distintas aplicaciones comunicarse entre sí.</td><td class="en-content" style="display:none;">Set of rules that allow different applications to communicate.</td></tr>
+        <tr class="gloss-row"><td>DevOps</td><td>Operaciones de Desarrollo</td><td class="es-content">Práctica que integra desarrollo de software y operaciones de TI para entregas más rápidas.</td><td class="en-content" style="display:none;">Practice integrating software development and IT operations for faster delivery.</td></tr>
+        <tr class="gloss-row"><td>Blockchain</td><td>Cadena de Bloques</td><td class="es-content">Registro distribuido e inmutable de transacciones digitales.</td><td class="en-content" style="display:none;">Distributed, immutable ledger of digital transactions.</td></tr>
+        <tr class="gloss-row"><td>Internet of Things</td><td>Internet de las Cosas</td><td class="es-content">Red de dispositivos físicos conectados que recopilan e intercambian datos.</td><td class="en-content" style="display:none;">Network of connected physical devices that collect and exchange data.</td></tr>
+        <tr class="gloss-row"><td>Deep Learning</td><td>Aprendizaje Profundo</td><td class="es-content">Subcampo del machine learning basado en redes neuronales de múltiples capas.</td><td class="en-content" style="display:none;">Machine learning subfield based on multilayer neural networks.</td></tr>
+        <tr class="gloss-row"><td>Natural Language Processing</td><td>Procesamiento del Lenguaje Natural</td><td class="es-content">Capacidad de los sistemas para entender y generar lenguaje humano.</td><td class="en-content" style="display:none;">Ability of systems to understand and generate human language.</td></tr>
+        <tr class="gloss-row"><td>Automation</td><td>Automatización</td><td class="es-content">Uso de tecnología para realizar tareas con mínima intervención humana.</td><td class="en-content" style="display:none;">Use of technology to perform tasks with minimal human intervention.</td></tr>
+        <tr class="gloss-row"><td>Agile Methodology</td><td>Metodología Ágil</td><td class="es-content">Marco de trabajo iterativo para el desarrollo de software centrado en entregas rápidas.</td><td class="en-content" style="display:none;">Iterative framework for software development focused on rapid delivery.</td></tr>
+        <tr class="gloss-row"><td>Microservices</td><td>Microservicios</td><td class="es-content">Arquitectura de software donde la aplicación se divide en servicios independientes.</td><td class="en-content" style="display:none;">Software architecture where the application is split into independent services.</td></tr>
+        <tr class="gloss-row"><td>Containerization</td><td>Contenedorización</td><td class="es-content">Empaquetado de software y sus dependencias en unidades portables llamadas contenedores.</td><td class="en-content" style="display:none;">Packaging software and dependencies into portable units called containers.</td></tr>
+        <tr class="gloss-row"><td>Data Science</td><td>Ciencia de Datos</td><td class="es-content">Campo interdisciplinario que usa estadística y programación para extraer conocimiento de datos.</td><td class="en-content" style="display:none;">Interdisciplinary field using statistics and programming to extract insights from data.</td></tr>
+        <tr class="gloss-row"><td>Phishing</td><td>Suplantación de Identidad</td><td class="es-content">Técnica de engaño digital para robar información confidencial haciéndose pasar por entidades legítimas.</td><td class="en-content" style="display:none;">Digital deception technique to steal confidential information by impersonating legitimate entities.</td></tr>
+        <tr class="gloss-row"><td>Zero Trust</td><td>Confianza Cero</td><td class="es-content">Modelo de seguridad que nunca confía automáticamente en ningún usuario o dispositivo.</td><td class="en-content" style="display:none;">Security model that never automatically trusts any user or device.</td></tr>
+        <tr class="gloss-row"><td>Ransomware</td><td>Secuestro de Datos</td><td class="es-content">Malware que cifra los archivos de la víctima y exige pago para restaurarlos.</td><td class="en-content" style="display:none;">Malware that encrypts victims' files and demands payment for restoration.</td></tr>
+        <tr class="gloss-row"><td>Scalability</td><td>Escalabilidad</td><td class="es-content">Capacidad de un sistema para crecer y adaptarse a mayor carga de trabajo.</td><td class="en-content" style="display:none;">Ability of a system to grow and adapt to greater workload.</td></tr>
+        <tr class="gloss-row"><td>UX / UI Design</td><td>Diseño de Experiencia e Interfaz</td><td class="es-content">Disciplina que busca crear interfaces digitales intuitivas y satisfactorias para el usuario.</td><td class="en-content" style="display:none;">Discipline focused on creating intuitive and satisfying digital interfaces for users.</td></tr>
+        <tr class="gloss-row"><td>Open Source</td><td>Código Abierto</td><td class="es-content">Software cuyo código fuente es público y puede ser usado, modificado y distribuido libremente.</td><td class="en-content" style="display:none;">Software whose source code is public and can be freely used, modified, and distributed.</td></tr>
+        <tr class="gloss-row"><td>Digital Transformation</td><td>Transformación Digital</td><td class="es-content">Proceso de integrar tecnología digital en todas las áreas de una organización.</td><td class="en-content" style="display:none;">Process of integrating digital technology across all areas of an organization.</td></tr>
+        <tr class="gloss-row"><td>Startup</td><td>Empresa Emergente</td><td class="es-content">Empresa en etapa inicial con un modelo de negocio innovador y escalable.</td><td class="en-content" style="display:none;">Early-stage company with an innovative and scalable business model.</td></tr>
+        <tr class="gloss-row"><td>Fintech</td><td>Tecnología Financiera</td><td class="es-content">Empresas que usan tecnología para ofrecer servicios financieros innovadores.</td><td class="en-content" style="display:none;">Companies using technology to deliver innovative financial services.</td></tr>
+        <tr class="gloss-row"><td>Algorithm</td><td>Algoritmo</td><td class="es-content">Secuencia de instrucciones paso a paso para resolver un problema computacional.</td><td class="en-content" style="display:none;">Step-by-step sequence of instructions to solve a computational problem.</td></tr>
+        <tr class="gloss-row"><td>Virtual Reality</td><td>Realidad Virtual</td><td class="es-content">Entorno digital simulado que sumerge al usuario en una experiencia inmersiva.</td><td class="en-content" style="display:none;">Simulated digital environment that immerses the user in an immersive experience.</td></tr>
+        <tr class="gloss-row"><td>Augmented Reality</td><td>Realidad Aumentada</td><td class="es-content">Tecnología que superpone elementos digitales sobre el mundo físico en tiempo real.</td><td class="en-content" style="display:none;">Technology that overlays digital elements on the physical world in real time.</td></tr>
+        <tr class="gloss-row"><td>Neural Network</td><td>Red Neuronal</td><td class="es-content">Sistema computacional inspirado en el cerebro humano, utilizado en inteligencia artificial.</td><td class="en-content" style="display:none;">Computational system inspired by the human brain, used in artificial intelligence.</td></tr>
+        <tr class="gloss-row"><td>SaaS</td><td>Software como Servicio</td><td class="es-content">Modelo de distribución donde el software se ofrece por internet bajo suscripción.</td><td class="en-content" style="display:none;">Distribution model where software is offered over the internet by subscription.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════ ETHICS -->
+<section id="ethics">
+  <div class="container">
+    <span class="section-label" data-lang-es="Reflexión" data-lang-en="Reflection">Reflexión</span>
+    <h2 class="section-title" data-lang-es="Ética en la <em>Tecnología</em>" data-lang-en="Ethics in <em>Technology</em>">Ética en la <em>Tecnología</em></h2>
+    <p style="color:var(--muted); margin-top:0.5rem; font-size:0.9rem;" data-lang-es="¿Cómo se implementa la ética en la tecnología empresarial?" data-lang-en="How is ethics implemented in enterprise technology?">
+      ¿Cómo se implementa la ética en la tecnología empresarial?
+    </p>
+
+    <div class="ethics-grid" style="margin-top:3rem;">
+      <div class="ethics-card reveal">
+        <div class="ethics-icon">🤖</div>
+        <h3 data-lang-es="Inteligencia Artificial Ética" data-lang-en="Ethical Artificial Intelligence">Inteligencia Artificial Ética</h3>
+        <p class="es-content">Los sistemas de IA deben diseñarse sin sesgos discriminatorios. Es responsabilidad de los desarrolladores garantizar que los algoritmos no perpetúen desigualdades sociales, raciales o de género. La transparencia en la toma de decisiones automática es un derecho ciudadano.</p>
+        <p class="en-content" style="display:none;">AI systems must be designed without discriminatory biases. It is the developers' responsibility to ensure that algorithms do not perpetuate social, racial, or gender inequalities. Transparency in automated decision-making is a citizens' right.</p>
+      </div>
+      <div class="ethics-card reveal">
+        <div class="ethics-icon">🔒</div>
+        <h3 data-lang-es="Uso Responsable de Datos" data-lang-en="Responsible Use of Data">Uso Responsable de Datos</h3>
+        <p class="es-content">Los datos personales son un bien sensible. Las empresas tienen la obligación ética y legal de recolectarlos solo con consentimiento informado, almacenarlos de forma segura y nunca comercializarlos sin autorización. La privacidad es un derecho humano fundamental.</p>
+        <p class="en-content" style="display:none;">Personal data is a sensitive asset. Companies have an ethical and legal obligation to collect it only with informed consent, store it securely, and never commercialize it without authorization. Privacy is a fundamental human right.</p>
+      </div>
+      <div class="ethics-card reveal">
+        <div class="ethics-icon">⚙️</div>
+        <h3 data-lang-es="Automatización y Empleo" data-lang-en="Automation and Employment">Automatización y Empleo</h3>
+        <p class="es-content">Si bien la automatización aumenta la productividad, su implementación debe ir acompañada de programas de reentrenamiento laboral. Las organizaciones tienen la responsabilidad social de minimizar el impacto negativo en los trabajadores desplazados por la tecnología.</p>
+        <p class="en-content" style="display:none;">While automation increases productivity, its implementation must be accompanied by workforce retraining programs. Organizations have a social responsibility to minimize the negative impact on workers displaced by technology.</p>
+      </div>
+      <div class="ethics-card reveal">
+        <div class="ethics-icon">🌍</div>
+        <h3 data-lang-es="Impacto Social de la Tecnología" data-lang-en="Social Impact of Technology">Impacto Social de la Tecnología</h3>
+        <p class="es-content">El desarrollo tecnológico debe orientarse hacia la equidad. La brecha digital sigue siendo una barrera en países en desarrollo como Colombia. Los profesionales de tecnología tienen el deber de diseñar soluciones accesibles e inclusivas que beneficien a todos los sectores de la sociedad.</p>
+        <p class="en-content" style="display:none;">Technological development must be guided toward equity. The digital divide remains a barrier in developing countries like Colombia. Technology professionals have a duty to design accessible and inclusive solutions that benefit all sectors of society.</p>
+      </div>
+    </div>
+
+    <!-- Reflexión Final -->
+    <div class="ethics-reflection reveal">
+      <div class="es-content">
+        <p><strong>Conclusión personal:</strong> La experiencia en Colombia 5.0 me permitió comprender que la tecnología no es neutral — cada decisión de diseño tiene consecuencias humanas. En un país como Colombia, donde la desigualdad es una realidad cotidiana, los profesionales del software tenemos la responsabilidad de construir herramientas que reduzcan brechas en lugar de ampliarlas. La ética no es un módulo adicional del currículo: es el fundamento de toda buena práctica tecnológica. Automatizar con empatía, proteger datos con integridad y desarrollar IA con transparencia son los pilares de una tecnología verdaderamente responsable.</p>
+      </div>
+      <div class="en-content" style="display:none;">
+        <p><strong>Personal Conclusion:</strong> The experience at Colombia 5.0 helped me understand that technology is not neutral — every design decision has human consequences. In a country like Colombia, where inequality is an everyday reality, software professionals have a responsibility to build tools that reduce gaps rather than widen them. Ethics is not an optional module in the curriculum: it is the foundation of all good technological practice. Automating with empathy, protecting data with integrity, and developing AI with transparency are the pillars of truly responsible technology.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════ FOOTER -->
+<footer>
+  <div class="footer-brand">COLOMBIA 5.0</div>
+  <p data-lang-es="Evento Tecnológico · Bogotá, Colombia · 2026" data-lang-en="Technology Event · Bogotá, Colombia · 2026">Evento Tecnológico · Bogotá, Colombia · 2026</p>
+  <p style="margin-top:0.5rem;" data-lang-es="Sitio web desarrollado como actividad académica — SENA Centro de Manufactura en Textil y Cuero" data-lang-en="Website developed as an academic activity — SENA Centro de Manufactura en Textil y Cuero">Sitio web desarrollado como actividad académica — SENA Centro de Manufactura en Textil y Cuero</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
